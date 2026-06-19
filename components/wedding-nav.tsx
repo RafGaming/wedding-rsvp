@@ -71,6 +71,14 @@ export function WeddingNav() {
               </a>
             );
           })}
+
+          <a
+            href="/guests-gallery"
+            className="relative py-2 text-[#a6b29e] transition hover:text-[#425647]"
+          >
+            Guests
+            <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-0 bg-[#d9a6a8] transition-transform duration-300 hover:scale-x-100" />
+          </a>
         </div>
 
         <a
