@@ -1,0 +1,234 @@
+.form {
+  position: relative;
+  display: grid;
+  gap: 1.05rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: rgba(255, 253, 248, 0.52);
+}
+
+.formHeading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.formHeading p {
+  margin: 0;
+  color: #274234;
+  font-family: var(--font-bodoni), Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+}
+
+.formHeading span,
+.label,
+.photoPicker,
+.successMessage,
+.errorMessage {
+  color: #637267;
+  font-family: var(--font-dm-sans), Arial, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.formHeading span {
+  display: block;
+  max-width: 260px;
+  margin-top: 0.45rem;
+}
+
+.formHeading b {
+  display: grid;
+  width: 2.3rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(215, 166, 164, 0.7);
+  border-radius: 999px;
+  color: #c88d8f;
+  font-size: 0.72rem;
+}
+
+.formRule {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(39, 66, 52, 0.36), transparent);
+}
+
+.label {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.label > span {
+  color: #355343;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.label em {
+  margin-left: 0.35rem;
+  color: #98a398;
+  font-size: 0.61rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.label input,
+.label textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(39, 66, 52, 0.22);
+  border-radius: 0;
+  background: transparent;
+  color: #2f4435;
+  font: inherit;
+  outline: none;
+  padding: 0.55rem 0.05rem;
+  transition: border-color 170ms ease;
+}
+
+.label textarea {
+  min-height: 5.4rem;
+  resize: vertical;
+}
+
+.label input::placeholder,
+.label textarea::placeholder {
+  color: #a1aaa2;
+}
+
+.label input:focus,
+.label textarea:focus {
+  border-bottom-color: #557e5d;
+}
+
+.photoPicker {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+  overflow: hidden;
+  min-height: 8rem;
+  align-content: center;
+  padding: 1rem 1.1rem;
+  border: 1px dashed rgba(39, 66, 52, 0.38);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(215, 166, 164, 0.18), transparent 7rem),
+    rgba(245, 240, 233, 0.6);
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, translate 180ms ease;
+}
+
+.photoPicker:hover {
+  border-color: #557e5d;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(215, 166, 164, 0.3), transparent 7rem),
+    rgba(245, 240, 233, 0.84);
+  translate: 0 -1px;
+}
+
+.photoPicker input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.photoPickerKicker {
+  color: #6d8d75;
+  font-size: 0.61rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.fileAction {
+  overflow: hidden;
+  color: #294735;
+  font-family: var(--font-bodoni), Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photoPicker small {
+  color: #879289;
+  font-size: 0.68rem;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  border: 1px solid #294735;
+  background: #294735;
+  color: #fffdf8;
+  cursor: pointer;
+  font-family: var(--font-dm-sans), Arial, sans-serif;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  padding: 1rem 1.1rem 1rem 1.2rem;
+  text-transform: uppercase;
+  transition: background 170ms ease, translate 170ms ease;
+}
+
+.submitButton b {
+  color: #f1d7d4;
+  font-size: 1rem;
+  line-height: 0.7;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #1e3527;
+  translate: 0 -2px;
+}
+
+.submitButton:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.successMessage,
+.errorMessage {
+  margin: 0;
+  padding: 0.8rem 0.85rem;
+}
+
+.successMessage {
+  border-left: 3px solid #557e5d;
+  background: rgba(211, 231, 213, 0.55);
+  color: #355343;
+}
+
+.errorMessage {
+  border-left: 3px solid #b06969;
+  background: rgba(245, 220, 220, 0.62);
+  color: #7f4242;
+}
+
+@media (max-width: 520px) {
+  .form {
+    padding: 1rem;
+  }
+
+  .formHeading p {
+    font-size: 1.65rem;
+  }
+
+  .formHeading span {
+    max-width: 205px;
+    font-size: 0.7rem;
+  }
+
+  .fileAction {
+    font-size: 1.2rem;
+  }
+}
