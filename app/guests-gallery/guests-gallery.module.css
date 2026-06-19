@@ -86,6 +86,12 @@
   text-align: center;
 }
 
+.heroUpload {
+  min-height: min(760px, 90svh);
+  align-content: center;
+  padding-block: clamp(6rem, 11vw, 9rem);
+}
+
 .backLink {
   position: absolute;
   top: 1.25rem;
@@ -157,6 +163,12 @@
   line-height: 0.76;
 }
 
+.heroUpload h1 {
+  max-width: 790px;
+  font-size: clamp(4.8rem, 12vw, 10.6rem);
+  line-height: 0.74;
+}
+
 .hero h1 span {
   color: var(--blush);
   font-family: var(--font-bodoni), Georgia, serif;
@@ -166,6 +178,10 @@
   line-height: 0.9;
 }
 
+.heroUpload h1 span {
+  margin-left: 0.18em;
+}
+
 .heroCopy {
   width: min(550px, 100%);
   margin: 2rem auto 0;
@@ -173,6 +189,37 @@
   font-family: var(--font-dm-sans), Arial, sans-serif;
   font-size: 0.98rem;
   line-height: 1.8;
+}
+
+.heroCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.1rem;
+  padding: 0.95rem 1.25rem;
+  border: 1px solid rgba(39, 66, 52, 0.66);
+  background: rgba(255, 253, 248, 0.72);
+  color: var(--ink);
+  font-family: var(--font-dm-sans), Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 180ms ease, color 180ms ease, translate 180ms ease;
+}
+
+.heroCta span {
+  color: var(--blush);
+  font-size: 1rem;
+  line-height: 0.7;
+}
+
+.heroCta:hover {
+  background: var(--ink);
+  color: #fffdf8;
+  translate: 0 -2px;
 }
 
 .heroRule,
@@ -589,6 +636,12 @@
     padding-top: 5.8rem;
   }
 
+  .heroUpload {
+    min-height: min(700px, 94svh);
+    padding-top: 7.5rem;
+    padding-bottom: 5rem;
+  }
+
   .backLink {
     top: 1rem;
   }
@@ -599,8 +652,9 @@
     letter-spacing: 0.1em;
   }
 
-  .hero h1 {
-    font-size: clamp(4rem, 20vw, 6.5rem);
+  .hero h1,
+  .heroUpload h1 {
+    font-size: clamp(4.1rem, 21vw, 6.7rem);
   }
 
   .heroCopy {

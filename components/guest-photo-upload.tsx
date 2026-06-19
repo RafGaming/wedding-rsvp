@@ -103,7 +103,7 @@ export function GuestPhotoUpload({ accessToken }: { accessToken: string }) {
       <div className={styles.formHeading}>
         <div>
           <p>Share a memory</p>
-          <span>It goes live the moment it is uploaded.</span>
+          <span>Your photo appears in the gallery the moment it is uploaded.</span>
         </div>
         <b aria-hidden="true">✦</b>
       </div>
@@ -136,7 +136,6 @@ export function GuestPhotoUpload({ accessToken }: { accessToken: string }) {
           name="photo"
           type="file"
           accept="image/jpeg,image/png,image/webp"
-          capture="environment"
           required
           onChange={(event) =>
             setSelectedFileName(event.target.files?.[0]?.name ?? "")
@@ -145,9 +144,9 @@ export function GuestPhotoUpload({ accessToken }: { accessToken: string }) {
 
         <span className={styles.photoPickerKicker}>Photo upload</span>
         <strong className={styles.fileAction}>
-          {selectedFileName || "Choose or take a photo"}
+          {selectedFileName || "Choose a photo"}
         </strong>
-        <small>JPG, PNG, or WebP · Maximum 15 MB</small>
+        <small>Take a new photo or choose from your phone · Maximum 15 MB</small>
       </label>
 
       <button className={styles.submitButton} disabled={isSubmitting} type="submit">

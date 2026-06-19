@@ -56,16 +56,6 @@ export function WeddingFilm() {
               brought us to this day.
             </p>
 
-            <button
-              type="button"
-              onClick={() => setIsOpen(true)}
-              className="film-play-button"
-            >
-              <span className="film-play-icon" aria-hidden="true">
-                ▶
-              </span>
-              <span>Play our story</span>
-            </button>
           </div>
 
           <button

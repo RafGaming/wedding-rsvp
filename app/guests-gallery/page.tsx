@@ -31,7 +31,7 @@ export default async function GuestsGalleryPage({
       <div className={styles.topBloom} aria-hidden="true" />
       <div className={styles.bottomBloom} aria-hidden="true" />
 
-      <header className={styles.hero}>
+      <header className={`${styles.hero} ${canUpload ? styles.heroUpload : ""}`}>
         <a href="/" className={styles.backLink}>
           <span aria-hidden="true">←</span>
           Wedding website
@@ -43,17 +43,39 @@ export default async function GuestsGalleryPage({
           <span>August 16, 2026</span>
         </div>
 
-        <p className={styles.kicker}>A visual guestbook</p>
-
-        <h1>
-          <span>Guests’</span>
-          Gallery
-        </h1>
-
-        <p className={styles.heroCopy}>
-          The candid smiles, quiet moments, and beautiful chaos shared by the
-          people who made this celebration complete.
+        <p className={styles.kicker}>
+          {canUpload ? "The photo guestbook" : "A visual guestbook"}
         </p>
+
+        {canUpload ? (
+          <>
+            <h1>
+              Add your
+              <span>memory.</span>
+            </h1>
+
+            <p className={styles.heroCopy}>
+              You are part of the story. Take a photo or choose one from your
+              phone, then leave it here for Jethro and France.
+            </p>
+
+            <a href="#share" className={styles.heroCta}>
+              Share a photo <span aria-hidden="true">↓</span>
+            </a>
+          </>
+        ) : (
+          <>
+            <h1>
+              <span>Guests’</span>
+              Gallery
+            </h1>
+
+            <p className={styles.heroCopy}>
+              The candid smiles, quiet moments, and beautiful chaos shared by
+              the people who made this celebration complete.
+            </p>
+          </>
+        )}
 
         <div className={styles.heroRule} aria-hidden="true">
           <span />
@@ -63,17 +85,17 @@ export default async function GuestsGalleryPage({
       </header>
 
       {canUpload && accessToken && (
-        <section className={styles.uploadSection}>
+        <section id="share" className={styles.uploadSection}>
           <div className={styles.uploadCopy}>
             <p className={styles.kicker}>Leave your mark</p>
             <h2>
-              Add your
-              <em> moment.</em>
+              Your moment,
+              <em> preserved.</em>
             </h2>
             <p>
               Capture the room, your table, the dance floor, or your favorite
-              memory. Your photo appears in the gallery as soon as it finishes
-              uploading.
+              memory. Your image is shared instantly with everyone celebrating
+              this day.
             </p>
 
             <div className={styles.uploadDetails}>
@@ -113,7 +135,9 @@ export default async function GuestsGalleryPage({
             <p className={styles.kicker}>The album is just beginning</p>
             <h3>The first shared memory will appear here soon.</h3>
             <span>
-              Scan the wedding QR code to add a photo from your phone.
+              {canUpload
+                ? "Choose a photo from your phone above to begin the collection."
+                : "Scan the wedding QR code to add a photo from your phone."}
             </span>
           </div>
         ) : (
