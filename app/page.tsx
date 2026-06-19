@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ScrollProgress } from "@/components/scroll-progress";
+import { PetalField } from "@/components/petal-field";
 import { WeddingCountdown } from "@/components/wedding-countdown";
 import { WeddingFaq } from "@/components/wedding-faq";
 import { WeddingFilm } from "@/components/wedding-film";
@@ -31,6 +32,8 @@ export default function Home() {
 
       {/* HERO — EDITORIAL GARDEN ESTATE */}
       <section id="top" className="hero-editorial scroll-mt-24">
+        <span className="background-flower background-flower--hero" aria-hidden="true" />
+        <PetalField variant="hero" />
         <div className="hero-editorial-rule" aria-hidden="true" />
 
         <div className="hero-layout">
@@ -108,6 +111,8 @@ export default function Home() {
 
       {/* INVITATION */}
       <section id="story" className="invitation-stage scroll-mt-24">
+        <span className="background-flower background-flower--invitation" aria-hidden="true" />
+        <PetalField variant="invitation" />
         <Image
           src="/images/F2.png"
           alt=""
@@ -154,6 +159,8 @@ export default function Home() {
 
       {/* DETAILS */}
       <section id="details" className="details-stage scroll-mt-24">
+        <span className="background-flower background-flower--details" aria-hidden="true" />
+        <PetalField variant="details" />
         <div className="details-heading">
           <p className="eyebrow">Wedding details</p>
           <h2 className="section-title">
@@ -231,6 +238,8 @@ export default function Home() {
 
       {/* RSVP — FINAL EDITORIAL SPREAD */}
       <section id="rsvp" className="rsvp-stage scroll-mt-24">
+        <span className="background-flower background-flower--rsvp" aria-hidden="true" />
+        <PetalField variant="rsvp" />
         <div className="rsvp-layout">
           <div className="rsvp-copy">
             <p className="eyebrow rsvp-eyebrow">RSVP</p>

@@ -1833,3 +1833,546 @@ em {
     transition: none;
   }
 }
+
+
+/* F3–F6 BACKGROUND FLOWERS
+   They are CSS background layers, never layout elements. This means they cannot
+   push cards down or create empty vertical space. Each is intentionally local
+   to a single composition, not scattered across the whole section. */
+
+.background-flower {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  display: block;
+  width: clamp(15rem, 22vw, 21rem);
+  aspect-ratio: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  user-select: none;
+}
+
+.background-flower--hero {
+  top: -4.5rem;
+  left: -4.75rem;
+  width: clamp(15rem, 20vw, 19rem);
+  opacity: 0.13;
+  background-image: url("/images/F3.png");
+  transform: rotate(-8deg);
+}
+
+.background-flower--invitation {
+  right: max(-3rem, calc(50% - 31rem));
+  bottom: 1.25rem;
+  width: clamp(16rem, 22vw, 21rem);
+  opacity: 0.14;
+  background-image: url("/images/F4.png");
+  transform: rotate(8deg);
+}
+
+.background-flower--details {
+  bottom: -6.5rem;
+  left: -7.25rem;
+  width: clamp(16rem, 22vw, 21rem);
+  opacity: 0.09;
+  background-image: url("/images/F5.png");
+  transform: rotate(-10deg);
+}
+
+.background-flower--rsvp {
+  right: -6rem;
+  bottom: -6.5rem;
+  width: clamp(17rem, 24vw, 23rem);
+  opacity: 0.13;
+  background-image: url("/images/F6.png");
+  transform: rotate(10deg);
+}
+
+/* Content always stays above the blooms. */
+.hero-layout,
+.hero-bottom-line,
+.invitation-card,
+.details-heading,
+.details-grid,
+.details-footer-note,
+.rsvp-layout {
+  position: relative;
+  z-index: 1;
+}
+
+/* Keep original F2 invitation florals above the subtle F4 background bloom. */
+.invitation-floral {
+  z-index: 1;
+}
+
+.invitation-card {
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .background-flower--hero {
+    top: -5rem;
+    left: -6rem;
+    width: 15rem;
+    opacity: 0.1;
+  }
+
+  .background-flower--invitation {
+    right: -6rem;
+    bottom: 0.5rem;
+    width: 16rem;
+    opacity: 0.1;
+  }
+
+  .background-flower--details {
+    bottom: -6rem;
+    left: -7rem;
+    width: 16rem;
+    opacity: 0.075;
+  }
+
+  .background-flower--rsvp {
+    right: -7rem;
+    bottom: -7rem;
+    width: 17rem;
+    opacity: 0.1;
+  }
+}
+
+
+/* PETAL SCATTER
+   Save the petal image here:
+   public/images/petal.png
+   These are purely decorative and sit behind the content. */
+
+.petal-scatter,
+.countdown-petal {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  display: block;
+  aspect-ratio: 1;
+  background: url("/images/petal.png") center / contain no-repeat;
+  user-select: none;
+}
+
+.petal-scatter {
+  width: clamp(1.4rem, 2.6vw, 2.5rem);
+  opacity: 0.18;
+}
+
+.petal-scatter--hero-1 {
+  top: 7.5rem;
+  right: 11%;
+  width: clamp(1.7rem, 3vw, 2.8rem);
+  opacity: 0.18;
+  transform: rotate(-18deg);
+}
+
+.petal-scatter--hero-2 {
+  top: 18rem;
+  left: 8%;
+  width: clamp(1.3rem, 2.1vw, 2rem);
+  opacity: 0.12;
+  transform: rotate(34deg);
+}
+
+.petal-scatter--hero-3 {
+  right: 18%;
+  bottom: 5rem;
+  width: clamp(1.6rem, 2.8vw, 2.4rem);
+  opacity: 0.16;
+  transform: rotate(12deg);
+}
+
+.petal-scatter--story-1 {
+  top: 10%;
+  right: 14%;
+  width: clamp(1.5rem, 2.5vw, 2.2rem);
+  opacity: 0.15;
+  transform: rotate(-32deg);
+}
+
+.petal-scatter--story-2 {
+  left: 11%;
+  bottom: 13%;
+  width: clamp(1.6rem, 2.8vw, 2.5rem);
+  opacity: 0.14;
+  transform: rotate(22deg);
+}
+
+.petal-scatter--story-3 {
+  right: 28%;
+  bottom: 7%;
+  width: clamp(1.1rem, 1.8vw, 1.7rem);
+  opacity: 0.11;
+  transform: rotate(48deg);
+}
+
+.petal-scatter--details-1 {
+  top: 11rem;
+  right: 9%;
+  width: clamp(1.4rem, 2.5vw, 2.2rem);
+  opacity: 0.13;
+  transform: rotate(-10deg);
+}
+
+.petal-scatter--details-2 {
+  left: 4%;
+  bottom: 5.5rem;
+  width: clamp(1.65rem, 2.9vw, 2.45rem);
+  opacity: 0.11;
+  transform: rotate(29deg);
+}
+
+.petal-scatter--rsvp-1 {
+  top: 9rem;
+  left: 10%;
+  width: clamp(1.5rem, 2.5vw, 2.2rem);
+  opacity: 0.17;
+  transform: rotate(-25deg);
+}
+
+.petal-scatter--rsvp-2 {
+  right: 11%;
+  bottom: 7rem;
+  width: clamp(1.8rem, 3vw, 2.6rem);
+  opacity: 0.16;
+  transform: rotate(18deg);
+}
+
+.petal-scatter--rsvp-3 {
+  left: 24%;
+  bottom: 4rem;
+  width: clamp(1.1rem, 1.9vw, 1.8rem);
+  opacity: 0.1;
+  transform: rotate(44deg);
+}
+
+.countdown-petal {
+  width: clamp(1.35rem, 2.5vw, 2.4rem);
+  opacity: 0.16;
+}
+
+.countdown-petal--1 {
+  top: 4rem;
+  left: 10%;
+  transform: rotate(-24deg);
+}
+
+.countdown-petal--2 {
+  top: 6.75rem;
+  right: 12%;
+  width: clamp(1.05rem, 1.95vw, 1.8rem);
+  opacity: 0.11;
+  transform: rotate(38deg);
+}
+
+.countdown-petal--3 {
+  left: 16%;
+  bottom: 4.4rem;
+  width: clamp(1.65rem, 2.7vw, 2.35rem);
+  opacity: 0.13;
+  transform: rotate(16deg);
+}
+
+.countdown-petal--4 {
+  right: 17%;
+  bottom: 5rem;
+  width: clamp(1.25rem, 2.1vw, 1.95rem);
+  opacity: 0.1;
+  transform: rotate(-41deg);
+}
+
+@media (max-width: 767px) {
+  .petal-scatter,
+  .countdown-petal {
+    opacity: 0.12;
+  }
+
+  .petal-scatter--hero-1 {
+    top: 6rem;
+    right: 10%;
+  }
+
+  .petal-scatter--hero-2 {
+    top: 13rem;
+    left: 4%;
+  }
+
+  .petal-scatter--hero-3 {
+    right: 8%;
+    bottom: 3rem;
+  }
+
+  .petal-scatter--story-1 {
+    top: 7%;
+    right: 7%;
+  }
+
+  .petal-scatter--story-2 {
+    left: 6%;
+    bottom: 7%;
+  }
+
+  .petal-scatter--story-3 {
+    right: 14%;
+    bottom: 5%;
+  }
+
+  .petal-scatter--details-1 {
+    top: 8rem;
+    right: 4%;
+  }
+
+  .petal-scatter--details-2 {
+    left: 2%;
+    bottom: 3rem;
+  }
+
+  .petal-scatter--rsvp-1 {
+    top: 6rem;
+    left: 6%;
+  }
+
+  .petal-scatter--rsvp-2 {
+    right: 6%;
+    bottom: 5rem;
+  }
+
+  .petal-scatter--rsvp-3 {
+    left: 18%;
+    bottom: 2rem;
+  }
+
+  .countdown-petal--1 {
+    top: 3rem;
+    left: 6%;
+  }
+
+  .countdown-petal--2 {
+    top: 5rem;
+    right: 7%;
+  }
+
+  .countdown-petal--3 {
+    left: 8%;
+    bottom: 3rem;
+  }
+
+  .countdown-petal--4 {
+    right: 10%;
+    bottom: 3rem;
+  }
+}
+
+
+/* SUBTLE FLOATING PETAL MOTION
+   Uses the individual CSS `translate` property so each petal keeps its original rotation. */
+
+.petal-scatter,
+.countdown-petal {
+  translate: 0 0;
+  will-change: translate, opacity;
+}
+
+.petal-scatter--hero-1,
+.petal-scatter--story-1,
+.countdown-petal--1 {
+  animation: petal-drift-a 10s ease-in-out infinite alternate;
+}
+
+.petal-scatter--hero-2,
+.petal-scatter--details-1,
+.countdown-petal--2 {
+  animation: petal-drift-b 12s ease-in-out infinite alternate;
+  animation-delay: -3s;
+}
+
+.petal-scatter--hero-3,
+.petal-scatter--story-2,
+.petal-scatter--rsvp-1,
+.countdown-petal--3 {
+  animation: petal-drift-c 11s ease-in-out infinite alternate;
+  animation-delay: -6s;
+}
+
+.petal-scatter--story-3,
+.petal-scatter--details-2,
+.petal-scatter--rsvp-2,
+.countdown-petal--4 {
+  animation: petal-drift-d 13s ease-in-out infinite alternate;
+  animation-delay: -2s;
+}
+
+.petal-scatter--rsvp-3 {
+  animation: petal-drift-e 14s ease-in-out infinite alternate;
+  animation-delay: -7s;
+}
+
+@keyframes petal-drift-a {
+  0% {
+    translate: 0 0;
+    opacity: 0.14;
+  }
+
+  50% {
+    translate: 10px 14px;
+    opacity: 0.19;
+  }
+
+  100% {
+    translate: -5px 24px;
+    opacity: 0.13;
+  }
+}
+
+@keyframes petal-drift-b {
+  0% {
+    translate: 0 0;
+    opacity: 0.11;
+  }
+
+  50% {
+    translate: -12px 16px;
+    opacity: 0.16;
+  }
+
+  100% {
+    translate: 7px 28px;
+    opacity: 0.1;
+  }
+}
+
+@keyframes petal-drift-c {
+  0% {
+    translate: 0 0;
+    opacity: 0.13;
+  }
+
+  50% {
+    translate: 13px -8px;
+    opacity: 0.18;
+  }
+
+  100% {
+    translate: 20px 18px;
+    opacity: 0.12;
+  }
+}
+
+@keyframes petal-drift-d {
+  0% {
+    translate: 0 0;
+    opacity: 0.1;
+  }
+
+  50% {
+    translate: -9px -13px;
+    opacity: 0.15;
+  }
+
+  100% {
+    translate: -18px 12px;
+    opacity: 0.09;
+  }
+}
+
+@keyframes petal-drift-e {
+  0% {
+    translate: 0 0;
+    opacity: 0.1;
+  }
+
+  50% {
+    translate: 8px 18px;
+    opacity: 0.16;
+  }
+
+  100% {
+    translate: -10px 26px;
+    opacity: 0.1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal-scatter,
+  .countdown-petal {
+    animation: none !important;
+    translate: 0 0 !important;
+  }
+}
+
+
+/* DENSE PETAL FIELDS
+   Keeps all existing flowers/backgrounds. This replaces the earlier 2–4 petals
+   per section with 12 visible petals per section. */
+
+.petal-scatter,
+.countdown-petal {
+  display: none !important;
+}
+
+.petal-field {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+.petal-field__petal {
+  position: absolute;
+  display: block;
+  width: var(--petal-size);
+  aspect-ratio: 1;
+  background: url("/images/petal.png") center / contain no-repeat;
+  translate: 0 0;
+  will-change: translate, opacity;
+  animation-name: dense-petal-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes dense-petal-drift {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: var(--petal-mid-x) var(--petal-mid-y);
+  }
+
+  100% {
+    translate: var(--petal-drift-x) var(--petal-drift-y);
+  }
+}
+
+/* Content is always above flowers and petals. */
+.hero-layout,
+.hero-bottom-line,
+.invitation-card,
+.details-heading,
+.details-grid,
+.details-footer-note,
+.rsvp-layout,
+.countdown-meeting-inner {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .petal-field__petal {
+    scale: 0.76;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal-field__petal {
+    animation: none !important;
+    translate: 0 0 !important;
+  }
+}

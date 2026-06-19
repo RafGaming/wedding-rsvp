@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { PetalField } from "@/components/petal-field";
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 
@@ -72,6 +73,7 @@ export function WeddingCountdown() {
 
   return (
     <section id="countdown" className="countdown-meeting scroll-mt-24">
+      <PetalField variant="countdown" />
       <div className="countdown-meeting-inner">
         <p className="countdown-kicker">Counting down</p>
 
