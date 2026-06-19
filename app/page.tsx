@@ -252,8 +252,7 @@ export default function Home() {
             </p>
 
             <a href="/rsvp" className="rsvp-button">
-              <span>RSVP now</span>
-              <span className="rsvp-button-arrow" aria-hidden="true">↗</span>
+              RSVP
             </a>
           </div>
 
