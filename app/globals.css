@@ -2376,3 +2376,122 @@ em {
     translate: 0 0 !important;
   }
 }
+
+
+/* DRESS CODE PALETTE — CSS ONLY, NO IMAGE FILE REQUIRED */
+
+.details-palette-guide {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(100%, 76rem);
+  margin: 2rem auto 0;
+  gap: clamp(1.75rem, 5vw, 4.25rem);
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(1.75rem, 4.5vw, 3.4rem) 0;
+}
+
+.details-palette-heading {
+  max-width: 29rem;
+}
+
+.details-palette-heading h3 {
+  margin: 1.2rem 0 0;
+  color: var(--green);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2.55rem, 5vw, 4.7rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.86;
+}
+
+.details-palette-heading h3 em {
+  color: var(--rose);
+}
+
+.details-palette-heading > p:not(.eyebrow) {
+  max-width: 26rem;
+  margin: 1.45rem 0 0;
+  color: var(--ink);
+  font-size: 0.92rem;
+  line-height: 1.82;
+}
+
+.details-palette-swatches {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.65rem, 1.35vw, 1rem);
+}
+
+.palette-chip {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 0;
+  text-align: center;
+}
+
+.palette-chip-color {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(93, 73, 62, 0.14);
+  border-radius: 0.12rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.32),
+    0 8px 18px rgba(93, 73, 62, 0.07);
+  transition: translate 180ms ease, box-shadow 180ms ease;
+}
+
+.palette-chip:hover .palette-chip-color {
+  translate: 0 -3px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 12px 24px rgba(93, 73, 62, 0.12);
+}
+
+.palette-chip > span:last-child {
+  overflow: hidden;
+  color: var(--ink);
+  font-size: clamp(0.58rem, 1.05vw, 0.72rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.palette-chip-color--blush { background: #dfbbb9; }
+.palette-chip-color--lavender { background: #cfc6db; }
+.palette-chip-color--sage { background: #b7c1ad; }
+.palette-chip-color--powder { background: #c3d1dc; }
+.palette-chip-color--peach { background: #edc6b4; }
+.palette-chip-color--butter { background: #ecd9a5; }
+.palette-chip-color--mint { background: #c4d9cf; }
+.palette-chip-color--dusty { background: #c897a2; }
+
+@media (min-width: 900px) {
+  .details-palette-guide {
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .details-palette-guide {
+    margin-top: 1.35rem;
+  }
+
+  .details-palette-swatches {
+    gap: 0.55rem;
+  }
+
+  .palette-chip {
+    gap: 0.4rem;
+  }
+
+  .palette-chip > span:last-child {
+    font-size: 0.56rem;
+    letter-spacing: 0;
+  }
+}

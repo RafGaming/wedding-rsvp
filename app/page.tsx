@@ -211,6 +211,56 @@ export default function Home() {
           </article>
         </div>
 
+        <section className="details-palette-guide" aria-labelledby="palette-title">
+          <div className="details-palette-heading">
+            <p className="eyebrow">Palette for the day</p>
+            <h3 id="palette-title">
+              Soft, romantic
+              <br />
+              <em>&amp; timeless.</em>
+            </h3>
+            <p>
+              Pastel formal attire is warmly encouraged. Choose a shade that
+              feels like you and celebrate in soft garden tones.
+            </p>
+          </div>
+
+          <div className="details-palette-swatches" aria-label="Recommended wedding colors">
+            <div className="palette-chip">
+              <span className="palette-chip-color palette-chip-color--blush" />
+              <span>Blush Pink</span>
+            </div>
+            <div className="palette-chip">
+              <span className="palette-chip-color palette-chip-color--lavender" />
+              <span>Lavender</span>
+            </div>
+            <div className="palette-chip">
+              <span className="palette-chip-color palette-chip-color--sage" />
+              <span>Sage Green</span>
+            </div>
+            <div className="palette-chip">
+              <span className="palette-chip-color palette-chip-color--powder" />
+              <span>Powder Blue</span>
+            </div>
+            <div className="palette-chip">
+              <span className="palette-chip-color palette-chip-color--peach" />
+              <span>Peach</span>
+            </div>
+            <div className="palette-chip">
+              <span className="palette-chip-color palette-chip-color--butter" />
+              <span>Butter Yellow</span>
+            </div>
+            <div className="palette-chip">
+              <span className="palette-chip-color palette-chip-color--mint" />
+              <span>Mint Green</span>
+            </div>
+            <div className="palette-chip">
+              <span className="palette-chip-color palette-chip-color--dusty" />
+              <span>Dusty Rose</span>
+            </div>
+          </div>
+        </section>
+
         <p className="details-footer-note">
           Reception: {receptionTimeText} · Dinner and celebration to follow
         </p>
@@ -224,6 +274,40 @@ export default function Home() {
 
       {/* FAQ */}
       <WeddingFaq />
+
+      {/* A NOTE ON GIFTS */}
+      <section
+        aria-labelledby="gift-note-title"
+        className="relative z-10 mx-auto my-16 grid w-[min(100%-2.5rem,48rem)] justify-items-center border-y border-[#5d493e]/20 px-4 py-10 text-center sm:my-24 sm:px-10 sm:py-16"
+      >
+        <div
+          aria-hidden="true"
+          className="mb-6 flex w-[min(100%,18rem)] items-center gap-3"
+        >
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#5d493e]/45" />
+          <i className="text-xs not-italic text-[#c99095]">✦</i>
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent to-[#5d493e]/45" />
+        </div>
+
+        <p className="m-0 text-[9px] font-bold uppercase tracking-[0.31em] text-[#5d493e]">
+          A note on gifts
+        </p>
+
+        <h2
+          id="gift-note-title"
+          className="mt-5 font-serif text-[clamp(2.7rem,5.4vw,5rem)] font-medium leading-[0.88] tracking-[-0.065em] text-[#31463a]"
+        >
+          Your presence is the
+          <br />
+          <em className="font-serif font-normal text-[#c99095]">greatest gift.</em>
+        </h2>
+
+        <p className="mt-6 max-w-[38rem] text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.85] text-[#5d493e]">
+          Your presence at our wedding is the greatest gift we could ask for.
+          If you wish to honor us with something more, a contribution toward
+          our future together would mean the world to us.
+        </p>
+      </section>
 
       {/* FLORAL TRANSITION */}
       <section aria-hidden="true" className="floral-transition">
@@ -293,6 +377,7 @@ export default function Home() {
           {wedding.couple.nameOne} <em>&amp;</em> {wedding.couple.nameTwo}
         </p>
         <span>{wedding.date.display}</span>
+        <span className="wedding-hashtag">#JethingMarriedWithFrance</span>
       </footer>
     </main>
   );
