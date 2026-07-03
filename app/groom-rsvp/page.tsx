@@ -288,7 +288,6 @@ export default async function GroomRSVPPage({
 
                       <a
                         href={`tel:${response.contact_number.replace(/\s/g, "")}`}
-                        onClick={(event) => event.stopPropagation()}
                         className="w-fit text-sm text-[#5d493e] underline decoration-[#c99095] underline-offset-4 transition hover:text-[#c99095]"
                       >
                         {response.contact_number}
