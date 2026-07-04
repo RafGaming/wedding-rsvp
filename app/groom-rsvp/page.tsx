@@ -70,7 +70,7 @@ export default async function GroomRSVPPage({
           <section className="my-auto py-16">
             <div className="border border-[#5d493e]/20 bg-white/70 p-6 shadow-[18px_20px_0_rgba(243,221,221,0.58)] sm:p-10">
               <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#5d493e]">
-                Jethro &amp; France
+                Jeth &amp; France
               </p>
 
               <h1 className="font-display mt-6 text-5xl font-medium leading-[0.88] tracking-[-0.06em] text-[#31463a] sm:text-6xl">
@@ -154,7 +154,7 @@ export default async function GroomRSVPPage({
         <header className="flex flex-wrap items-center justify-between gap-5 border-b border-[#5d493e]/20 pb-5">
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#5d493e]">
-              Jethro &amp; France
+              Jeth &amp; France
             </p>
             <h1 className="font-display mt-2 text-4xl font-medium tracking-[-0.06em] text-[#31463a] sm:text-5xl">
               RSVP <em className="font-editorial text-[#c99095]">dashboard.</em>

@@ -183,10 +183,10 @@ em {
 }
 
 .hero-title-ampersand {
-  position: relative;
+  /* position: relative;
   z-index: 2;
-  display: block;
-  margin: 0.06em 0 0.02em 0.74em;
+  display: block; */
+  /* margin: 0.06em 0 0.02em 0.74em; */
   color: var(--rose);
   font-family: var(--font-display), Georgia, serif;
   font-size: 0.42em;
@@ -199,8 +199,9 @@ em {
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  width: 9rem;
+  width: 30rem;
   margin: 2.25rem 0;
+  color: var(--rose);
 }
 
 .hero-intro-rule span {
@@ -618,7 +619,7 @@ em {
 .attire-palette {
   display: flex;
   gap: 0.55rem;
-  margin-top: 2.2rem;
+  margin-top: 2.2rem; 
 }
 
 .attire-swatch {
@@ -628,10 +629,15 @@ em {
   box-shadow: inset 0 0 0 3px rgba(255, 250, 246, 0.52);
 }
 
-.attire-swatch--sage { background: #a6b29e; }
-.attire-swatch--rose { background: #d9a6a8; }
-.attire-swatch--sand { background: #d7c4a5; }
-.attire-swatch--lilac { background: #cdb8d0; }
+.attire-swatch--sage { background: #C7D8C3; } 
+.attire-swatch--blush-pink { background: #F4D6D8; } 
+/* .attire-swatch--sand { background: #d7c4a5; } */
+.attire-swatch--lavender { background: #E8E0F7; } 
+.attire-swatch--powder-blue { background: #D6E7F5; } 
+.attire-swatch--butter-yellow { background: #FFF3B8; }
+.attire-swatch--peach { background: #F9D8C5; }
+.attire-swatch--mint-green { background: #D9F0E3; } 
+.attire-swatch--dusty-rose { background: #DDB7C1; } 
 
 .details-footer-note {
   margin-top: 2.1rem;
@@ -986,7 +992,7 @@ em {
 .floral-transition {
   display: grid;
   place-items: center;
-  padding: 3.8rem 1.5rem;
+  /* padding: 3.8rem 1.5rem; */
   background: linear-gradient(110deg, #f4e1e0, #f7ece8, #f0dedf);
 }
 
@@ -1233,8 +1239,8 @@ em {
 }
 
 .wedding-footer {
-  padding: 3rem 1.5rem;
-  background: var(--ivory);
+  padding: 2rem;
+  background: var(--blush);
   text-align: center;
 }
 
@@ -1252,11 +1258,10 @@ em {
 .wedding-footer span {
   display: block;
   margin-top: 0.9rem;
-  color: var(--sage);
-  font-size: 8px;
+  color: var(--green);
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
 }
 
 /* EXISTING COMPONENT COMPATIBILITY */
@@ -2462,14 +2467,14 @@ em {
   white-space: nowrap;
 }
 
-.palette-chip-color--blush { background: #dfbbb9; }
+/* .palette-chip-color--blush { background: #dfbbb9; }
 .palette-chip-color--lavender { background: #cfc6db; }
 .palette-chip-color--sage { background: #b7c1ad; }
 .palette-chip-color--powder { background: #c3d1dc; }
 .palette-chip-color--peach { background: #edc6b4; }
 .palette-chip-color--butter { background: #ecd9a5; }
 .palette-chip-color--mint { background: #c4d9cf; }
-.palette-chip-color--dusty { background: #c897a2; }
+.palette-chip-color--dusty { background: #c897a2; } */
 
 @media (min-width: 900px) {
   .details-palette-guide {

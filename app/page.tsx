@@ -42,9 +42,9 @@ export default function Home() {
 
             <p className="hero-pretitle">Joyfully invite you to celebrate</p>
 
-            <h1 className="hero-title">
-              <span className="hero-title-name">Jethro</span>
-              <span className="hero-title-ampersand">&amp;</span>
+            <h1 className="hero-title flex flex-col gap-6">
+              <span className="hero-title-name">Jeth{" "}
+              <span className="hero-title-ampersand">&amp;</span></span>
               <span className="hero-title-name hero-title-name--second">
                 France
               </span>
@@ -52,7 +52,7 @@ export default function Home() {
 
             <div className="hero-intro-rule" aria-hidden="true">
               <span />
-              <i />
+              <i /> #JethingMarriedWithFrance
               <span />
             </div>
 
@@ -82,11 +82,12 @@ export default function Home() {
                 priority
                 sizes="(max-width: 1024px) 100vw, 65vw"
                 className="hero-image"
+                loading="eager"
               />
             </div>
 
             <p className="hero-visual-caption">
-              Jethro Dionisio &amp; France Domingo
+              Jethro Dionisio &amp; Francisca Domingo
               <span />
               Tagaytay City
             </p>
@@ -203,10 +204,17 @@ export default function Home() {
             <p>{wedding.dressCode.description}</p>
 
             <div className="attire-palette" aria-label="Pastel Formal palette">
+              <span className="attire-swatch attire-swatch--blush-pink" />
+              <span className="attire-swatch attire-swatch--lavender" />
               <span className="attire-swatch attire-swatch--sage" />
-              <span className="attire-swatch attire-swatch--rose" />
-              <span className="attire-swatch attire-swatch--sand" />
-              <span className="attire-swatch attire-swatch--lilac" />
+              <span className="attire-swatch attire-swatch--powder-blue" />
+              <span className="attire-swatch attire-swatch--butter-yellow" />
+              <span className="attire-swatch attire-swatch--peach" />
+            </div>
+            <div className="attire-palette" aria-label="Pastel Formal palette">
+              
+              <span className="attire-swatch attire-swatch--mint-green" />
+              <span className="attire-swatch attire-swatch--dusty-rose" />
             </div>
           </article>
         </div>
@@ -227,35 +235,35 @@ export default function Home() {
 
           <div className="details-palette-swatches" aria-label="Recommended wedding colors">
             <div className="palette-chip">
-              <span className="palette-chip-color palette-chip-color--blush" />
+              <span className="palette-chip-color attire-swatch--blush-pink" />
               <span>Blush Pink</span>
             </div>
             <div className="palette-chip">
-              <span className="palette-chip-color palette-chip-color--lavender" />
+              <span className="palette-chip-color attire-swatch--lavender" />
               <span>Lavender</span>
             </div>
             <div className="palette-chip">
-              <span className="palette-chip-color palette-chip-color--sage" />
+              <span className="palette-chip-color attire-swatch--sage" />
               <span>Sage Green</span>
             </div>
             <div className="palette-chip">
-              <span className="palette-chip-color palette-chip-color--powder" />
+              <span className="palette-chip-color attire-swatch--powder-blue" />
               <span>Powder Blue</span>
             </div>
             <div className="palette-chip">
-              <span className="palette-chip-color palette-chip-color--peach" />
+              <span className="palette-chip-color attire-swatch--peach" />
               <span>Peach</span>
             </div>
             <div className="palette-chip">
-              <span className="palette-chip-color palette-chip-color--butter" />
+              <span className="palette-chip-color attire-swatch--butter-yellow" />
               <span>Butter Yellow</span>
             </div>
             <div className="palette-chip">
-              <span className="palette-chip-color palette-chip-color--mint" />
+              <span className="palette-chip-color attire-swatch--mint-green" />
               <span>Mint Green</span>
             </div>
             <div className="palette-chip">
-              <span className="palette-chip-color palette-chip-color--dusty" />
+              <span className="palette-chip-color attire-swatch--dusty-rose" />
               <span>Dusty Rose</span>
             </div>
           </div>
@@ -272,13 +280,21 @@ export default function Home() {
       {/* PRE-WEDDING PORTRAITS */}
       <WeddingGallery />
 
-      {/* FAQ */}
-      <WeddingFaq />
+      {/* FLORAL TRANSITION */}
+      <section aria-hidden="true" className="floral-transition">
+        <Image
+          src="/images/F1.png"
+          alt=""
+          width={2048}
+          height={768}
+          className="floral-transition-image"
+        />
+      </section>
 
       {/* A NOTE ON GIFTS */}
       <section
         aria-labelledby="gift-note-title"
-        className="relative z-10 mx-auto my-16 grid w-[min(100%-2.5rem,48rem)] justify-items-center border-y border-[#5d493e]/20 px-4 py-10 text-center sm:my-24 sm:px-10 sm:py-16"
+        className="relative z-10 mx-auto grid w-[min(100%-2.5rem,48rem)] justify-items-center border-y border-[#5d493e]/20 px-4 py-10 text-center sm:px-10 sm:py-16"
       >
         <div
           aria-hidden="true"
@@ -309,16 +325,8 @@ export default function Home() {
         </p>
       </section>
 
-      {/* FLORAL TRANSITION */}
-      <section aria-hidden="true" className="floral-transition">
-        <Image
-          src="/images/F1.png"
-          alt=""
-          width={2048}
-          height={768}
-          className="floral-transition-image"
-        />
-      </section>
+       {/* FAQ */}
+      <WeddingFaq />
 
       {/* RSVP — FINAL EDITORIAL SPREAD */}
       <section id="rsvp" className="rsvp-stage scroll-mt-24">
@@ -362,7 +370,7 @@ export default function Home() {
             </div>
 
             <p className="rsvp-portrait-caption">
-              Jethro <span>&amp;</span> France
+              Jeth <span>&amp;</span> France
             </p>
 
             <p className="rsvp-portrait-side-note" aria-hidden="true">
@@ -379,6 +387,7 @@ export default function Home() {
         <span>{wedding.date.display}</span>
         <span className="wedding-hashtag">#JethingMarriedWithFrance</span>
       </footer>
+
     </main>
   );
 }

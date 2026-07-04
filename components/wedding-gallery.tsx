@@ -29,7 +29,7 @@ const galleryImages = [
     height: 1067,
   },
   {
-    src: "/images/gallery/05.jpg",
+    src: "/images/gallery/05_new.jpg",
     alt: "A romantic portrait together",
     width: 1600,
     height: 1067,
@@ -180,7 +180,7 @@ export function WeddingGallery() {
             />
 
             <div className="flex items-center justify-between gap-4 px-2 pt-3 text-[8px] font-bold uppercase tracking-[0.18em] text-[#5d493e]">
-              <span>Jethro &amp; France</span>
+              <span>Jeth &amp; France</span>
               <span>
                 {String(selectedIndex + 1).padStart(2, "0")} /{" "}
                 {String(galleryImages.length).padStart(2, "0")}

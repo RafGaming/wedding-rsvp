@@ -38,7 +38,7 @@ export default async function GuestsGalleryPage({
         </a>
 
         <div className={styles.heroEyebrow}>
-          <span>Jethro &amp; France</span>
+          <span>Jeth &amp; France</span>
           <i aria-hidden="true" />
           <span>August 16, 2026</span>
         </div>
@@ -56,7 +56,7 @@ export default async function GuestsGalleryPage({
 
             <p className={styles.heroCopy}>
               You are part of the story. Take a photo or choose one from your
-              phone, then leave it here for Jethro and France.
+              phone, then leave it here for Jeth and France.
             </p>
 
             <a href="#share" className={styles.heroCta}>

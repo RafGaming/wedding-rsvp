@@ -62,7 +62,7 @@ export function WeddingFilm() {
             type="button"
             onClick={() => setIsOpen(true)}
             className="film-preview"
-            aria-label="Play Jethro and France pre-wedding film"
+            aria-label="Play Jeth and France pre-wedding film"
           >
             <Image
               src={wedding.media.heroImage}
@@ -89,7 +89,7 @@ export function WeddingFilm() {
           className="film-modal"
           role="dialog"
           aria-modal="true"
-          aria-label="Jethro and France pre-wedding film"
+          aria-label="Jeth and France pre-wedding film"
           onMouseDown={closeFilm}
         >
           <button
@@ -118,7 +118,7 @@ export function WeddingFilm() {
             </video>
 
             <div className="film-modal-meta">
-              <span>Jethro &amp; France</span>
+              <span>Jeth &amp; France</span>
               <span>Pre-wedding film · 2026</span>
             </div>
           </div>

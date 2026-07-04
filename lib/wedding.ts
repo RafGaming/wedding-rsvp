@@ -1,7 +1,7 @@
 export const wedding = {
   couple: {
     nameOne: "Jethro Dionisio",
-    nameTwo: "France Domingo",
+    nameTwo: "Francisca Domingo",
   },
 
   date: {
@@ -26,30 +26,30 @@ export const wedding = {
   },
 
   rsvp: {
-    deadline: "July 1, 2026",
+    deadline: "July 15, 2026",
     contactName: "Wedding Coordinator",
     contactNumber: "09XX XXX XXXX",
   },
 
   media: {
-    heroImage: "/images/hero.jpg",
+    heroImage: "/images/hero_new.jpg",
 
     galleryImages: [
       {
         src: "/images/gallery/01.jpg",
-        alt: "Jethro and France together",
+        alt: "Jeth and France together",
       },
       {
         src: "/images/gallery/02.jpg",
-        alt: "A quiet moment shared by Jethro and France",
+        alt: "A quiet moment shared by Jeth and France",
       },
       {
         src: "/images/gallery/03.jpg",
-        alt: "Jethro and France celebrating their love",
+        alt: "Jeth and France celebrating their love",
       },
       {
         src: "/images/gallery/04.jpg",
-        alt: "A pre-wedding portrait of Jethro and France",
+        alt: "A pre-wedding portrait of Jeth and France",
       },
     ],
 

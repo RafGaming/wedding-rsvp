@@ -382,8 +382,9 @@ export default function RSVPPage() {
                   </p>
 
                   <p className="mt-3 text-sm leading-6 text-[#735f52]">
-                    Also, if there&apos;s anyone else you&apos;d like to invite whom we both know,
-                    please let me know.
+                     <strong>This invitation is intended for you only (one invitation per person), </strong>as we have a limited number of guests.
+                    If there&apos;s anyone else you&apos;d like to suggest whom we both know, please let us know. You may also check our Facebook profile using the link below if you&apos;d like to recommend someone.
+                    Please understand that, due to our limited guest capacity, we&apos;re unable to guarantee that we&apos;ll be able to extend an invitation to everyone who is suggested. We truly appreciate your understanding.
                   </p>
 
                   <a
@@ -392,7 +393,16 @@ export default function RSVPPage() {
                     rel="noreferrer"
                     className="mt-4 inline-flex items-center gap-2 border-b border-[#4f6252] pb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#4f6252] transition hover:border-[#d9a6a8] hover:text-[#d9a6a8]"
                   >
-                    Message me on Facebook
+                    Groom's Facebook
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/share/18fFNcHr7b/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 border-b border-[#4f6252] pb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#4f6252] transition hover:border-[#d9a6a8] hover:text-[#d9a6a8]"
+                  >
+                    Bride's Facebook
                     <span aria-hidden="true">↗</span>
                   </a>
                 </section>
