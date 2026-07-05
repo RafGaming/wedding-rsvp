@@ -199,15 +199,15 @@ em {
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  width: 30rem;
+  width: 9rem; 
   margin: 2.25rem 0;
   color: var(--rose);
 }
 
-.hero-intro-rule span {
+ .hero-intro-rule span {
   display: block;
   height: 1px;
-  flex: 1;
+  flex: 0 0 55px;
   background: var(--sage);
 }
 
@@ -220,9 +220,9 @@ em {
 }
 
 .hero-copy-text {
-  max-width: 27rem;
+  max-width: 23rem;
   margin: 0;
-  color: var(--ink);
+  color: var(--ink); 
   font-size: 0.94rem;
   line-height: 1.9;
 }
@@ -291,9 +291,12 @@ em {
 }
 
 .hero-image-matte {
-  position: relative;
-  overflow: hidden;
-  background: #e8ddd6;
+  display: block;
+  width: 100%;
+  /* aspect-ratio: 5 / 5; */ 
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: saturate(0.87) contrast(0.98) sepia(0.055); 
 }
 
 .hero-image-matte::after {
@@ -574,9 +577,9 @@ em {
 .details-card-label {
   margin: 0;
   color: var(--sage);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.28em;
+  font-size: 15px;
+  font-weight: bolder; 
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
@@ -1185,7 +1188,7 @@ em {
 .rsvp-portrait-image {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  /* aspect-ratio: 4 / 5; */
   object-fit: cover;
   object-position: 50% 50%;
   filter: saturate(0.87) contrast(0.98) sepia(0.055);
@@ -1247,7 +1250,7 @@ em {
 .wedding-footer p {
   margin: 0;
   color: var(--green);
-  font-size: 1.9rem;
+  font-size: 1rem;
   line-height: 1;
 }
 
@@ -1259,7 +1262,7 @@ em {
   display: block;
   margin-top: 0.9rem;
   color: var(--green);
-  font-size: 12px;
+  font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.2em;
 }

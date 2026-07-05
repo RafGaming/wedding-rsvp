@@ -81,8 +81,7 @@ export default function Home() {
                 height={1080}
                 priority
                 sizes="(max-width: 1024px) 100vw, 65vw"
-                className="hero-image"
-                loading="eager"
+                className="hero-image" 
               />
             </div>
 
@@ -357,7 +356,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="rsvp-portrait">
+           <div className="rsvp-portrait">
             <div className="rsvp-portrait-matte">
               <Image
                 src={wedding.media.galleryImages[0].src}
@@ -380,14 +379,13 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="wedding-footer">
+      <footer className="wedding-footer"> 
         <p>
           {wedding.couple.nameOne} <em>&amp;</em> {wedding.couple.nameTwo}
         </p>
         <span>{wedding.date.display}</span>
-        <span className="wedding-hashtag">#JethingMarriedWithFrance</span>
+        <span className="wedding-hashtag">#JethingMarriedWithFrance</span> 
       </footer>
-
     </main>
   );
 }
