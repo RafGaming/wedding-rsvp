@@ -378,11 +378,11 @@ export default function RSVPPage() {
 
                 <section className="border border-[#dfd3c9] bg-[#fffaf6]/70 p-4 sm:p-5">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#735f52]">
-                    A small favor
+                    NOTE:
                   </p>
 
                   <p className="mt-3 text-sm leading-6 text-[#735f52]">
-                     <strong>This invitation is intended for you only (one invitation per person), </strong>as we have a limited number of guests.
+                     <strong>We&apos;ve reserved (1) seat for you </strong>as we have a limited number of guests.
                     If there&apos;s anyone else you&apos;d like to suggest whom we both know, please let us know. You may also check our Facebook profile using the link below if you&apos;d like to recommend someone.
                     Please understand that, due to our limited guest capacity, we&apos;re unable to guarantee that we&apos;ll be able to extend an invitation to everyone who is suggested. We truly appreciate your understanding.
                   </p>
