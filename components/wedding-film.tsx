@@ -3,12 +3,24 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { wedding } from "@/lib/wedding";
+import { useMusic } from "@/components/music-context";
 
 const filmSource = "/video/01-web.mp4";
 
 export function WeddingFilm() {
   const [isOpen, setIsOpen] = useState(false);
+  const { pauseMusic, resumeMusic } = useMusic();
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleOpenVideo = () => {
+    pauseMusic();
+    setIsOpen(true);
+  };
+
+  const handleCloseVideo = () => {
+    setIsOpen(false);
+    resumeMusic();
+  };
 
   function closeFilm() {
     setIsOpen(false);
@@ -60,7 +72,7 @@ export function WeddingFilm() {
 
           <button
             type="button"
-            onClick={() => setIsOpen(true)}
+             onClick={handleOpenVideo}
             className="film-preview"
             aria-label="Play Jeth and France pre-wedding film"
           >
@@ -90,11 +102,11 @@ export function WeddingFilm() {
           role="dialog"
           aria-modal="true"
           aria-label="Jeth and France pre-wedding film"
-          onMouseDown={closeFilm}
+          onMouseDown={handleCloseVideo}
         >
           <button
             type="button"
-            onClick={closeFilm}
+            onClick={handleCloseVideo}
             className="film-modal-close"
             aria-label="Close film player"
           >

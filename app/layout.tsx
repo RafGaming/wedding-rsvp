@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Bodoni_Moda, DM_Sans } from "next/font/google";
 import { wedding } from "@/lib/wedding";
 import "./globals.css";
+import BackgroundMusic from "@/components/background-music";
+import { MusicProvider } from "@/components/music-context";
 
 const bodoni = Bodoni_Moda({
   subsets: ["latin"],
@@ -28,7 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${bodoni.variable} ${dmSans.variable}`}>
-        {children}
+        <MusicProvider>
+          {children}
+        </MusicProvider>
       </body>
     </html>
   );

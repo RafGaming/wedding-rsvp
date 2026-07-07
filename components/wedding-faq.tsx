@@ -7,7 +7,7 @@ const faqItems = [
   {
     question: "How do I RSVP?",
     answer:
-      "Select RSVP, enter the invitation code provided to you, then confirm the number of guests in your party. Your code will show the number of seats reserved for your invitation.",
+      "Select RSVP, complete the form, and submit your response.",
   },
   {
     question: "What is the dress code?",

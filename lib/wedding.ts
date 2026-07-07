@@ -33,7 +33,7 @@ export const wedding = {
 
   media: {
     heroImage: "/images/hero_new.jpg",
-
+    rsvpImage: "/images/rsvp1.jpg",
     galleryImages: [
       {
         src: "/images/gallery/01.jpg",
