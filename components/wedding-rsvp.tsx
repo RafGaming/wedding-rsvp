@@ -115,19 +115,12 @@ export default function WeddingRSVP() {
 
             <div className="relative mx-auto flex min-h-[calc(100vh-4rem)] max-w-5xl flex-col">
             <header className="flex items-center justify-between border-b border-[#e9ddd5] pb-5">
-                {/* <Link
+                <Link
                 href="/invitation" 
                 className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#735f52] transition hover:text-[#d9a6a8]"
                 >
                 ← Back to Invitation
-                </Link> */}
-                <button
-                type="button"
-               onClick={async () => {handleOpen}}
-                className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#735f52] transition hover:text-[#d9a6a8]"
-                >
-                ← Back to Invitation
-                </button>
+                </Link>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#a6b29e]">
                 RSVP received
                 </p>
