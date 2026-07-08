@@ -19,7 +19,7 @@ export default function WeddingInvitation({
   onClose,
 }: WeddingInvitationProps) {
   const ceremonyTimeText = isTBA(wedding.date.ceremonyTime)
-    ? "Timing to follow"
+    ? "3PM onwards"
     : wedding.date.ceremonyTime;
 
   const arrivalText = isTBA(wedding.date.guestArrivalTime)
@@ -182,9 +182,7 @@ export default function WeddingInvitation({
                  August 16, 2026
                </h3>
                <p>
-                 Ceremony: Timing to follow
-                 <br />
-                 Guest arrival will be announce soon.
+                 Ceremony and Reception: 3PM onwards
                </p>
              </article>
    

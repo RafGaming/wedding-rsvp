@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: "When should guests arrive?",
     answer:
-      "Guest arrival, ceremony, and reception times will be announced soon. Please revisit this website closer to the wedding date for the final schedule.",
+      "The ceremony will begin at **3:00 PM onwards**. Additional details, including guest arrival and reception times, will be announced soon. Please revisit this website closer to the wedding date for the final schedule.",
   },
   {
     question: "May I bring an additional guest?",
