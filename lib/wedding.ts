@@ -20,9 +20,9 @@ export const wedding = {
   },
 
   dressCode: {
-    title: "Pastel Formal",
+    title: "Pastel Formal/Semi-Formal",
     description:
-      "We invite you to dress in elegant formal attire inspired by soft pastel garden tones. Please avoid white, ivory, cream, and bridal shades.",
+      "We invite you to dress in elegant formal/semi-formal attire inspired by soft pastel garden tones. Please avoid white, ivory, cream, and bridal shades.",
   },
 
   rsvp: {
